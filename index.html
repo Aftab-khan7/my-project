@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://kit.fontawesome.com/efe938aa6b.js" crossorigin="anonymous"></script>
+    <title>Responsive Header</title>
+</head>
+    <body>
+        
+    <style>
+        *{
+            text-decoration: none;
+            color: white;
+            box-sizing: border-box;
+        }
+
+    .header-section{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 50px;
+        background-color: #525252;
+    }
+    .menu-section, .nav-section{
+        display: flex;
+        
+    }
+    .menu-section {
+        gap: 5rem;
+    }
+
+    .header-section a{
+        font-size: 1.42rem;
+
+    }
+    .menu-section a{
+        font-weight: 600;
+    }
+
+    .logo-section{
+        margin: 0 auto;
+    }
+
+    .nav-section{
+        gap: 2rem;
+        margin-left: auto;
+    }
+.mobile-line{
+    display: none;
+    flex-direction: column;
+}
+
+.mobile-line span{
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 3px 0;
+    cursor: pointer;
+
+}
+.mobile-content{
+    display: none;    
+}
+    @media (max-width : 767px) {
+        .header-section{
+        flex-direction: column;
+    }
+    
+    .logo-section{order: 1;}
+    .menu-section{order: 2;}
+    .nav-section{order: 3;}
+    .mobile-line{order: 4;}
+    .mobile-content{order:5}
+
+    .mobile-line{
+        display: flex;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        }
+
+    .menu-section{
+        display: none;
+        gap: 1rem;
+        padding: 15px 0px;
+        flex-direction: column;
+        }
+
+     .menu-section a{
+        font-size: 2.6rem;
+        }
+
+        .logo-section{
+        margin: 0;
+    }
+
+    .nav-section {
+        display: none;
+        flex-direction: row;
+        gap: 1rem;
+        margin-left: inherit;
+
+        }
+         .nav-section a i{
+            color: rgb(119, 119, 236);
+            font-size: 1.8rem;
+            padding: 15px;
+
+        }
+        .mobile-content{
+            display: none;
+            flex-direction: row;
+            gap: 1rem;
+            padding: 5px;
+        }
+        .mobile-content a{
+            padding: 9px 23px;
+            background: cadetblue;
+            cursor: pointer;
+}
+        }
+
+
+ .active{
+    display: flex;
+}
+
+
+
+
+
+    }
+
+    </style>
+
+
+        <header>
+            <div class="header-section" id="header">
+                <div class="menu-section " id="menu">
+                    <a href="#about">About</a>
+                    <a href="#service">Service</a>
+                    <a href="#career">Career</a>
+                    <a href="#blogs">Blogs</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                <div class="logo-section" id="logo"><a href="#">My Logo</a></div>
+                <div class="nav-section " id="nav">
+                    <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+                    <a href="#"><i class="fa-solid fa-bahai"></i></a>
+                    <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+
+                </div>
+                  <div class="mobile-content" id="mobilecontent">
+                    <a href="#help">Help</a>
+                    <a href="#why">Why Us</a>
+                    <a href="#review">Review</a>
+
+                </div>
+  
+            </div>
+           
+            <div class="mobile-line" id="mobBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+               
+              
+        </header>
+
+<script>
+const mobBtn = document.getElementById("mobBtn");
+const headerContent = document.getElementById("header");
+const menu = document.getElementById("menu");
+const nav = document.getElementById("nav");
+const mobContent = document.getElementById("mobilecontent");
+
+mobBtn.addEventListener("click", responsivefmob);
+
+function responsivefmob(){
+
+    menu.classList.toggle("active");
+    nav.classList.toggle("active");
+    mobContent.classList.toggle("active");
+}
+
+</script>
+
+
+    </body>
+</html>
