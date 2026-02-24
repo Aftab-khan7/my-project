@@ -1,0 +1,213 @@
+ *{
+    text-decoration: none;
+    color: white;
+    box-sizing: border-box;
+
+    }
+
+    .header-section{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 50px;
+        background-color: #525252;
+    }
+    .menu-section, .nav-section{
+        display: flex;
+        
+    }
+    .menu-section {
+        gap: 5rem;
+    }
+
+    .header-section a{
+        font-size: 1.42rem;
+
+    }
+    .menu-section a{
+        font-weight: 600;
+    }
+
+    .logo-section{
+        margin: 0 auto;
+    }
+
+    .nav-section{
+        gap: 2rem;
+        margin-left: auto;
+    }
+.mobile-line{
+    display: none;
+    flex-direction: column;
+}
+
+.mobile-line span{
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 3px 0;
+    cursor: pointer;
+
+}
+.mobile-content{
+    display: none;    
+}
+
+
+/* -------------- Hero Section CSS =============================== */
+
+.hero-section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slider{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+.slider{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;  
+    opacity: 0; 
+}
+
+.slider.active{
+    opacity: 1;
+    z-index: 1;
+    }
+
+  .nav-btn{
+    position:absolute;
+    top:50%;
+    right:0;
+    padding:12px 25px;
+    background:black;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    z-index:10;
+    opacity:0.7;
+}
+
+.prev-btn{
+ position:absolute;
+    top:50%;
+    left:0;
+    padding:12px 25px;
+    background:black;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    z-index:10;
+    opacity:0.7;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------- max-width 767 =============================== */
+
+
+    @media (max-width : 767px) {
+        .header-section{
+        flex-direction: column;
+    }
+    
+    .logo-section{order: 1;}
+    .menu-section{order: 2;}
+    .nav-section{order: 3;}
+    .mobile-line{order: 4;}
+    .mobile-content{order:5}
+
+    .mobile-line{
+        display: flex;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        }
+
+    .menu-section{
+        display: none;
+        gap: 1rem;
+        padding: 15px 0px;
+        flex-direction: column;
+        }
+
+     .menu-section a{
+        font-size: 2.6rem;
+        }
+
+        .logo-section{
+        margin: 0;
+    }
+
+    .nav-section {
+        display: none;
+        flex-direction: row;
+        gap: 1rem;
+        margin-left: inherit;
+
+        }
+         .nav-section a i{
+            color: rgb(119, 119, 236);
+            font-size: 1.8rem;
+            padding: 15px;
+
+        }
+        .mobile-content{
+            display: none;
+            flex-direction: row;
+            gap: 1rem;
+            padding: 5px;
+        }
+        .mobile-content a{
+            padding: 9px 23px;
+            background: cadetblue;
+            cursor: pointer;
+}
+        
+
+
+ .active{
+    display: flex;
+}
+
+}
+
+
+/* -------------- max-width 481 =============================== */
+
+
+@media (max-width:481px) {
+
+    .mobile-content a{
+    padding: 6px 14px;
+    font-size: 1.2rem;
+            
+}
+
+}
+
+
